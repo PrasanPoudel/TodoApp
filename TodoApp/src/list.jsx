@@ -5,11 +5,10 @@ function List({ items, handleEditClick, handleDeleteClick, handleCompleteClick }
     <li
       className={styles.item}
       key={item.id}
-      title="Double click to mark completed"
       onDoubleClick={() => handleCompleteClick(item.id)}
     >
-      <span className={item.isDone ? styles.completed : ''}>{item.value}</span>
-      <div>
+      <p className={item.isDone ? styles.completed : ''}>{item.value}</p>
+      <div className={styles.functionalBtn}>
         <button className={styles.editBtn} onClick={() => handleEditClick(item)}>
           Edit
         </button>

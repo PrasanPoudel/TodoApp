@@ -6,7 +6,7 @@
     color: white;
     border: none;
     border-radius: 6px;
-    transition: all 0.33s;
+    transition: all 0.5s;
     transform: scale(1);
   }
 
@@ -29,7 +29,9 @@
   }
 
   .item {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 35%;
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
@@ -37,7 +39,11 @@
     .editBtn {
       background-color: green;
     }
-
+.functionalBtn{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
     .deleteBtn {
       margin-left: 10px;
       background-color: red;
@@ -51,13 +57,13 @@
   }
 
   button:hover {
-    transition: all 0.33s;
+    transition: all 0.5s;
     transform: scale(1.1);
   }
 
   button:disabled {
     cursor: not-allowed;
-    background-color: grey;
+    background-color: rgb(120, 120, 120, 1);
     transform: scale(1);
   }
 }
@@ -66,8 +72,7 @@
   font-size: 0.9rem;
   color: rgb(120, 120, 120, 1);
 }
-
-@media screen and (width >= 768px) {
+@media screen and (width > 768px) {
   .App {
     width: 50%;
   }

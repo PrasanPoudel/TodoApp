@@ -83,8 +83,7 @@ const Todo = () => {
         items={items}
         handleEditClick={handleEditClick}
         handleDeleteClick={handleDeleteClick}
-        handleCompleteClick={handleCompleteClick}
-        />
+        handleCompleteClick={handleCompleteClick}/>
     </div>
   );
 };

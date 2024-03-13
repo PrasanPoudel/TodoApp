@@ -7,7 +7,7 @@
   color: white;
   border: none;
   border-radius: 6px;
-  transition: all 0.33s;
+  transition: all 0.5s;
   transform: scale(1);
 }
 .App form {
@@ -26,7 +26,9 @@
   margin-right: 0.5rem;
 }
 .App .item {
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 35%;
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
@@ -34,6 +36,11 @@
 }
 .App .item .editBtn {
   background-color: green;
+}
+.App .item .functionalBtn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
 }
 .App .item .deleteBtn {
   margin-left: 10px;
@@ -45,12 +52,12 @@
   text-decoration: line-through;
 }
 .App button:hover {
-  transition: all 0.33s;
+  transition: all 0.5s;
   transform: scale(1.1);
 }
 .App button:disabled {
   cursor: not-allowed;
-  background-color: grey;
+  background-color: rgb(120, 120, 120);
   transform: scale(1);
 }
 
@@ -59,7 +66,7 @@
   color: rgb(120, 120, 120);
 }
 
-@media screen and (width >= 768px) {
+@media screen and (width > 768px) {
   .App {
     width: 50%;
   }
